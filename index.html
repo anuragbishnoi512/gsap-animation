@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gsap Animation</title>
+</head>
+
+<body>
+    <style>
+        .box1 {
+            background-color: aqua;
+            height: 100px;
+            width: 100px;
+            border-radius: 16px;
+        }
+
+        .box2 {
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            border-radius: 32px;
+        }
+
+        .box3 {
+            background-color: rgb(128, 0, 117);
+            height: 100px;
+            width: 100px;
+            border-radius: 64px;
+        }
+
+        .box4 {
+            background-color: yellow;
+            height: 100px;
+            width: 100px;
+            border-radius: 99px;
+        }
+
+        .box5 {
+            background-color: lightgreen;
+            height: 100px;
+            width: 100px;
+            border-radius: 64px;
+        }
+
+        .box6 {
+            background-color: lightcoral;
+            height: 100px;
+            width: 100px;
+            border-radius: 32px;
+        }
+
+        .sct1 {
+            background-color: aqua;
+            width: 70px;
+            height: 70px;
+        }
+        .sct2 {
+            background-color: red;
+            width: 70px;
+            height: 70px;
+        }
+        .sct3 {
+            background-color: blueviolet;
+            width: 70px;
+            height: 70px;
+        }
+    </style>
+    <div class="box1" id="card1"></div>
+    <div class="box2" id="card2"></div>
+    <div class="box3" id="card3"></div>
+    <div class="box4" id="card4"></div>
+    <div class="box5" id="card5"></div>
+    <div class="box6" id="card6"></div>
+
+    <div class="sct3" id="sct3"></div>
+    <div class="sct2" id="sct2"></div>
+    <div class="sct1" id="sct1"></div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+        gsap.rejisterPlugin(ScrollTrigger);
+
+        gsap.to("#sct1",
+            {
+                ScrollTrigger: {
+                    trigger: "#sct1",
+                    toggleActions: "restart pause reverse pause"
+                },
+                x: 400,
+                rotation: 360,
+                duration: 3
+            }
+        );
+
+
+
+
+        // gsap.to(
+        //     "#card2", {
+        //     backgroundColor: "yellow",
+        //     xPercent: 500,
+        //     duration: 1,
+        //     yoyo: true,
+        //     repeat: -1,
+        // });
+        // gsap.from(
+        //     "#card3", {
+        //     xPercent: 1000,
+        //     duration: 1,
+        //     yoyo: true,
+        //     repeat: -1,
+        //     backgroundColor: "white",
+        // });
+
+        // gsap.fromTo(
+        //     "#card4",
+        //     {
+        //         xPercent: "100",
+        //     },
+        //     {
+        //         xPercent: "1000",
+        //         duration: 9,
+        //         backgroundColor: "#00ff00",
+        //         yoyo: true,
+        //         repeat: -1,
+        //     },
+        // );
+        // gsap.from(
+        //     "#card1",
+        //     {
+        //         yPercent: "500",
+        //         duration: 1,
+        //         repeat: -1,
+        //         yoyo: true,
+        //     }
+        // );
+
+        // gsap.from(
+        //     "#card5",
+        //     {
+        //         xPercent: "1000",
+        //         duration: 1,
+        //         backgroundColor: "white",
+        //         yoyo: true,
+        //         repeat: -1,
+        //     }
+
+        // );
+        // gsap.from(
+        //     "#card9",
+        //     {
+        //         xPercent: "1000",
+        //         duration: 1,
+        //         backgroundColor: "white",
+        //         yoyo: true,
+        //         repeat: -1,
+        //     }
+
+        // );
+        // gsap.from(
+        //     "#card6",
+        //     {
+        //         xPercent: "800",
+        //         duration: 1,
+        //         backgroundColor: "aqua",
+        //         rotate: 180,
+        //         repeat: -1,
+        //         yoyo: true,
+        //     }
+        // );
+    </script>
+</body>
+
+</html>
